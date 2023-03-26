@@ -65,7 +65,7 @@ with col1:
         )
 
 if st.session_state.df_exists or (user_input and submit_button_1):
-    chatbot = Chatbot(api_key="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")
+    chatbot = Chatbot(api_key=st.secrets["api"])
     if not st.session_state.protocol:
         with st.spinner(text='Detecting the protocol...'):
             protocol = list(chatbot.ask(
@@ -82,7 +82,7 @@ if st.session_state.df_exists or (user_input and submit_button_1):
 
     schema = SCHEMAS[st.session_state.protocol]
 
-    chatbot = Chatbot(api_key="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")
+    chatbot = Chatbot(api_key= st.secrets["api"])
     if not st.session_state.query:
         with st.spinner(text='Writing the query...'):
             query = chatbot.ask(
