@@ -1,5 +1,5 @@
 flatten_json==0.1.13
 pandas==1.5.3
-requests==2.22.0
+requests
 revChatGPT==4.0.9
 streamlit==1.17.0
